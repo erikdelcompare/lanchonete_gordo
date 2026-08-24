@@ -44,10 +44,23 @@ Nada foi inventado.
   (`STORE.mapsEmbedSrc` / `STORE.mapsLink` em `js/data.js`).
   Assim que tiver o endereço, defina `PENDING_ADDRESS` no topo de
   `js/data.js` com o texto completo.
-- **Milkshakes/bebidas**: as fotos enviadas não têm cardápio com sabores e
-  preços, então essa seção foi deixada de fora por decisão do cliente.
-  Para adicionar depois, crie uma nova categoria em `js/data.js` seguindo
-  o mesmo padrão das demais.
+- **Milkshakes**: as fotos enviadas não têm cardápio com sabores e preços,
+  então essa seção foi deixada de fora por decisão do cliente. Para
+  adicionar depois, crie uma nova categoria em `js/data.js` seguindo o
+  mesmo padrão das demais.
+- **Bebidas**: a categoria "Bebidas" é uma lista de referência com itens
+  comuns de lanchonete (refrigerantes, suco, água), a pedido do cliente,
+  **sem preço confirmado** — por isso os cards não têm botão de adicionar
+  ao carrinho, só um selo "Sob consulta". Para ativar a compra, edite cada
+  produto em `js/data.js` (categoria `bebidas`) adicionando `price: <valor>`
+  e removendo `priceless: true` da categoria quando todos os preços reais
+  estiverem confirmados.
+- **Segundo link do Google Maps**: o link `maps.app.goo.gl/jzkR7PGxbswr1zkt6`
+  não pôde ser resolvido (encurtadores do Google Maps são bloqueados no
+  ambiente onde este site foi gerado). O mapa incorporado atualmente ainda
+  usa as coordenadas do primeiro link enviado. Para trocar, peça ao Google
+  Maps o código de "Incorporar mapa" (Compartilhar → Incorporar um mapa)
+  do local correto e atualize `mapsEmbedSrc`/`mapsLink` em `js/data.js`.
 - **Horário de funcionamento exato**: só se sabe que Pastéis, Hot Dog,
   Combos e Porções são servidos "somente finais de semana" (texto
   presente nas artes originais). Não há horário de abertura/fechamento

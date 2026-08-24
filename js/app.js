@@ -13,6 +13,7 @@
     combo: "icon-combo",
     fries: "icon-fries",
     acai: "icon-acai",
+    drink: "icon-drink",
   };
 
   /** @type {Array<any>} carrinho em memória (persistido em localStorage) */
@@ -101,6 +102,21 @@
 
   // ================= RENDER: PRODUTOS =================
   function productCardHTML(cat, product) {
+    // Categoria "priceless" (ex.: Bebidas) é só informativa: sem preço
+    // confirmado, não dá pra somar no carrinho, então o card não é
+    // clicável e mostra "Sob consulta" no lugar do valor.
+    if (cat.priceless) {
+      return `
+        <div class="product-card product-card-info">
+          <div class="product-card-top">
+            <h4 class="product-name">${product.name}</h4>
+          </div>
+          ${product.description ? `<p class="product-desc">${product.description}</p>` : ""}
+          <div class="product-bottom">
+            <span class="product-price product-price-consult">Sob consulta</span>
+          </div>
+        </div>`;
+    }
     return `
       <button class="product-card ${product.featured ? "featured" : ""}" data-cat="${cat.id}" data-product="${product.id}">
         <div class="product-card-top">
@@ -157,7 +173,7 @@
     }
 
     // liga clique nos cards
-    $$(".product-card", root).forEach((card) => {
+    $$(".product-card:not(.product-card-info)", root).forEach((card) => {
       card.addEventListener("click", () => {
         const cat = MENU.find((c) => c.id === card.dataset.cat);
         const product = cat.products.find((p) => p.id === card.dataset.product);

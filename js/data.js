@@ -367,4 +367,32 @@ const MENU = [
     coberturas: ["Chocolate", "Morango", "Caramelo", "Leite condensado", "Açaí", "Abacaxi"],
     frutas: ["Banana", "Maçã"],
   },
+  {
+    // Catálogo de referência com bebidas comuns de lanchonete. Não veio nas
+    // artes de cardápio enviadas pelo cliente, por isso NÃO tem preço —
+    // é só uma lista informativa para o cliente ver o que costuma ter.
+    // Assim que o preço real de cada uma for confirmado, edite os itens
+    // abaixo adicionando "price: <valor>" para que passem a poder ser
+    // adicionados ao carrinho normalmente (como as demais categorias).
+    id: "bebidas",
+    name: "Bebidas",
+    shortName: "Bebidas",
+    icon: "drink",
+    weekendOnly: false,
+    priceless: true,
+    notice:
+      "Itens comuns em lanchonetes — sabores, marcas e disponibilidade podem variar. Preços a confirmar com o atendente ou pelo WhatsApp.",
+    products: [
+      { id: "coca-lata", name: "Coca-Cola lata", description: "350ml" },
+      { id: "coca-zero-lata", name: "Coca-Cola Zero lata", description: "350ml" },
+      { id: "guarana-lata", name: "Guaraná Antarctica lata", description: "350ml" },
+      { id: "fanta-laranja-lata", name: "Fanta Laranja lata", description: "350ml" },
+      { id: "fanta-uva-lata", name: "Fanta Uva lata", description: "350ml" },
+      { id: "sprite-lata", name: "Sprite lata", description: "350ml" },
+      { id: "refri-1-5l", name: "Refrigerante 1,5L", description: "Coca-Cola, Fanta ou Guaraná" },
+      { id: "suco-caixinha", name: "Suco de caixinha", description: "Vários sabores" },
+      { id: "agua-mineral", name: "Água mineral", description: "Sem gás" },
+      { id: "agua-com-gas", name: "Água com gás", description: "" },
+    ],
+  },
 ];
