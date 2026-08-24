@@ -18,9 +18,13 @@ const STORE = {
   tagline: "Lanches, pastéis, hot dogs e açaí",
   whatsapp: "556599123282", // formato internacional só dígitos, a partir de "+55 65 9912-3282"
   whatsappDisplay: "+55 65 9912-3282",
+  // Embed oficial do Google Maps para o local "Lanchonete do gordo"
+  // (nome confirmado dentro do próprio link de incorporação enviado).
   mapsEmbedSrc:
-    "https://www.google.com/maps/embed?pb=!4v1787598993743!6m8!1m7!1sNslM2QO7kyI_sU-p38_nhA!2m2!1d-16.04820778000159!2d-57.65562114904021!3f304.5697308773231!4f-6.199760809692165!5f1.6397403366207595",
-  mapsLink: "https://www.google.com/maps?q=-16.04820778000159,-57.65562114904021",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.6832801573955!2d-57.65824232621158!3d-16.048204629253384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939a550068e16ac7%3A0x229e9516b0611621!2sLanchonete%20do%20gordo!5e1!3m2!1spt-PT!2sus!4v1787602055364!5m2!1spt-PT!2sus",
+  // Link direto por coordenadas (mais confiável que tentar montar uma URL
+  // a partir do par de hex "!1s..." do embed, que não é o Place ID padrão).
+  mapsLink: "https://www.google.com/maps?q=-16.048204629253384,-57.65824232621158",
   address: PENDING_ADDRESS, // exibir como "a confirmar" enquanto for null
   deliveryNotice: "Fazemos entregas", // texto presente no cardápio de Pastéis
   weekendNotice: "Somente finais de semana", // presente nos cardápios de Pastéis, Hot Dog e Combos/Porções

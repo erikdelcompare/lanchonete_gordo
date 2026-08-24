@@ -38,12 +38,6 @@ Nada foi inventado.
 
 ## Pendências (dados reais que faltam confirmar)
 
-- **Endereço em texto** (rua, número, bairro, cidade): ainda não enviado.
-  Enquanto isso, a seção "Onde estamos" exibe "a confirmar" e usa apenas
-  o mapa incorporado com as coordenadas reais fornecidas
-  (`STORE.mapsEmbedSrc` / `STORE.mapsLink` em `js/data.js`).
-  Assim que tiver o endereço, defina `PENDING_ADDRESS` no topo de
-  `js/data.js` com o texto completo.
 - **Milkshakes**: as fotos enviadas não têm cardápio com sabores e preços,
   então essa seção foi deixada de fora por decisão do cliente. Para
   adicionar depois, crie uma nova categoria em `js/data.js` seguindo o
@@ -55,12 +49,10 @@ Nada foi inventado.
   produto em `js/data.js` (categoria `bebidas`) adicionando `price: <valor>`
   e removendo `priceless: true` da categoria quando todos os preços reais
   estiverem confirmados.
-- **Segundo link do Google Maps**: o link `maps.app.goo.gl/jzkR7PGxbswr1zkt6`
-  não pôde ser resolvido (encurtadores do Google Maps são bloqueados no
-  ambiente onde este site foi gerado). O mapa incorporado atualmente ainda
-  usa as coordenadas do primeiro link enviado. Para trocar, peça ao Google
-  Maps o código de "Incorporar mapa" (Compartilhar → Incorporar um mapa)
-  do local correto e atualize `mapsEmbedSrc`/`mapsLink` em `js/data.js`.
+- **Endereço em texto** ainda é a única peça que falta para a seção
+  "Onde estamos": o mapa já usa o embed oficial do Google Maps para o
+  local **"Lanchonete do gordo"** (confirmado pelo próprio código de
+  incorporação enviado), só falta a rua/número/bairro/cidade escritos.
 - **Horário de funcionamento exato**: só se sabe que Pastéis, Hot Dog,
   Combos e Porções são servidos "somente finais de semana" (texto
   presente nas artes originais). Não há horário de abertura/fechamento
