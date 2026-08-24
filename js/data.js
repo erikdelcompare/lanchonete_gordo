@@ -11,7 +11,7 @@
  * marcados explicitamente com PENDING_* em vez de um valor inventado.
  */
 
-const PENDING_ADDRESS = null; // aguardando texto do endereço (rua/número/bairro/cidade)
+const PENDING_ADDRESS = "Av. Tancredo Neves, 2511 - Cáceres - MT";
 
 const STORE = {
   name: "Lanchonete e Sorveteria do Gordo",

@@ -49,10 +49,6 @@ Nada foi inventado.
   produto em `js/data.js` (categoria `bebidas`) adicionando `price: <valor>`
   e removendo `priceless: true` da categoria quando todos os preços reais
   estiverem confirmados.
-- **Endereço em texto** ainda é a única peça que falta para a seção
-  "Onde estamos": o mapa já usa o embed oficial do Google Maps para o
-  local **"Lanchonete do gordo"** (confirmado pelo próprio código de
-  incorporação enviado), só falta a rua/número/bairro/cidade escritos.
 - **Horário de funcionamento exato**: só se sabe que Pastéis, Hot Dog,
   Combos e Porções são servidos "somente finais de semana" (texto
   presente nas artes originais). Não há horário de abertura/fechamento
