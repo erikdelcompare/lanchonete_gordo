@@ -49,12 +49,6 @@ Nada foi inventado.
   produto em `js/data.js` (categoria `bebidas`) adicionando `price: <valor>`
   e removendo `priceless: true` da categoria quando todos os preços reais
   estiverem confirmados.
-- **Horário de funcionamento exato**: só se sabe que Pastéis, Hot Dog,
-  Combos e Porções são servidos "somente finais de semana" (texto
-  presente nas artes originais). Não há horário de abertura/fechamento
-  confirmado.
-- **Formas de pagamento**: não constam nas artes de cardápio; o rodapé
-  do site orienta o cliente a combinar isso pelo WhatsApp.
 
 ## WhatsApp
 
@@ -65,3 +59,10 @@ confirmado pelo estabelecimento. Ele está centralizado em `STORE.whatsapp`
 Ao finalizar o pedido, o site monta automaticamente uma mensagem com
 todos os itens, variações, adicionais, observações, modalidade
 (entrega/retirada) e o total, e abre o WhatsApp com o texto já pronto.
+
+## Horário e pagamento
+
+- **Horário**: todos os dias, das 15h30 às 23h00 (`STORE.hoursLabel` /
+  `STORE.hours` em `js/data.js`). Pastéis, Hot Dog, Combos e Porções
+  continuam sendo servidos só aos finais de semana, dentro desse horário.
+- **Pagamento**: débito, crédito e Pix (`STORE.paymentMethods`).

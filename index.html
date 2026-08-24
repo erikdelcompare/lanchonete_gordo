@@ -23,6 +23,8 @@
     <symbol id="icon-combo" viewBox="0 0 24 24"><path d="M6 8h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 8Z" fill="currentColor"/><path d="M9 8a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M4 8h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
     <symbol id="icon-fries" viewBox="0 0 24 24"><path d="M5 9h14l-1.4 10.3a1.6 1.6 0 0 1-1.6 1.4H8a1.6 1.6 0 0 1-1.6-1.4L5 9Z" fill="currentColor" opacity=".5"/><rect x="7" y="3" width="2" height="9" rx="1" fill="currentColor"/><rect x="10.2" y="2" width="2" height="10" rx="1" fill="currentColor"/><rect x="13.4" y="3.5" width="2" height="9" rx="1" fill="currentColor"/><rect x="16.4" y="4.5" width="2" height="8" rx="1" fill="currentColor"/></symbol>
     <symbol id="icon-acai" viewBox="0 0 24 24"><path d="M4 11h16c0 4.5-2.2 9-8 9s-8-4.5-8-9Z" fill="currentColor"/><path d="M6 9c-.6-1.4 0-3 1.4-3.6M18 9c.6-1.4 0-3-1.4-3.6M12 8c-.4-1.6.2-3 1.6-3.6" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 7v5.5l3.5 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-card" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2.2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M2.5 9.5h19" stroke="currentColor" stroke-width="1.8"/><rect x="5.5" y="13" width="5" height="2" rx="1" fill="currentColor"/></symbol>
     <symbol id="icon-drink" viewBox="0 0 24 24"><path d="M6 3h12l-1.4 15.2A2 2 0 0 1 14.6 20H9.4a2 2 0 0 1-2-1.8L6 3Z" fill="currentColor" opacity=".55"/><path d="M6.6 9h10.8" stroke="var(--bg)" stroke-width=".9"/><path d="M5.5 3h13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M10 5.5c.6.8 1.4.8 2 0s1.4-.8 2 0" stroke="currentColor" stroke-width=".9" fill="none" stroke-linecap="round"/></symbol>
     <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="16" y1="16" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="icon-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/><path d="M2.5 3h2l2.2 12.1a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L21 7H6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -99,11 +101,16 @@
       <div class="location-info">
         <h3><svg viewBox="0 0 24 24" class="icon"><use href="#icon-pin"/></svg> Onde estamos</h3>
         <p id="addressLine" class="address-line">Endereço: a confirmar</p>
+        <p id="hoursLine" class="hours-line">
+          <svg viewBox="0 0 24 24" class="icon-sm"><use href="#icon-clock"/></svg>
+          <span id="hoursLineText"></span>
+        </p>
         <a id="mapsLinkBtn" class="btn-pill btn-outline" target="_blank" rel="noopener">Abrir no Google Maps</a>
         <div class="location-notices">
-          <p><strong>Pastéis, Hot Dog, Combos e Porções:</strong> somente finais de semana.</p>
-          <p><strong>Lanches e Açaí:</strong> conforme funcionamento da loja.</p>
+          <p><strong>Pastéis, Hot Dog, Combos e Porções:</strong> somente finais de semana (dentro do horário de funcionamento).</p>
+          <p><strong>Lanches, Açaí e Bebidas:</strong> todos os dias, no mesmo horário.</p>
         </div>
+        <div class="payment-methods" id="paymentMethods"></div>
       </div>
       <div class="location-map">
         <iframe id="mapsEmbed" src="" width="100%" height="260" style="border:0" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Localização no Google Maps"></iframe>
@@ -118,7 +125,7 @@
     <svg viewBox="0 0 24 24" class="icon"><use href="#icon-chef"/></svg>
     <span>Lanchonete e Sorveteria do Gordo</span>
   </div>
-  <p class="footer-note">Formas de pagamento e detalhes finais são combinados diretamente pelo WhatsApp.</p>
+  <p class="footer-note">Débito, crédito e Pix aceitos no local. Detalhes finais do pedido são combinados pelo WhatsApp.</p>
   <a class="btn-pill btn-whatsapp-mini" id="footerWhatsapp" target="_blank" rel="noopener">
     <svg viewBox="0 0 32 32" class="icon"><use href="#icon-whatsapp"/></svg>
     <span id="footerWhatsappLabel">+55 65 9912-3282</span>

@@ -68,6 +68,21 @@
       : "Endereço: a confirmar (em breve)";
     $("#mapsLinkBtn").href = STORE.mapsLink;
     $("#mapsEmbed").src = STORE.mapsEmbedSrc;
+
+    if (STORE.hoursLabel) {
+      $("#hoursLineText").textContent = STORE.hoursLabel;
+    } else {
+      $("#hoursLine").style.display = "none";
+    }
+
+    const paymentEl = $("#paymentMethods");
+    if (STORE.paymentMethods && STORE.paymentMethods.length) {
+      paymentEl.innerHTML = STORE.paymentMethods
+        .map(
+          (m) => `<span class="payment-badge"><svg viewBox="0 0 24 24"><use href="#icon-card"/></svg>${m}</span>`
+        )
+        .join("");
+    }
   }
 
   // ================= RENDER: NAV DE CATEGORIAS =================

@@ -29,6 +29,19 @@ const STORE = {
   deliveryNotice: "Fazemos entregas", // texto presente no cardápio de Pastéis
   weekendNotice: "Somente finais de semana", // presente nos cardápios de Pastéis, Hot Dog e Combos/Porções
   ingredientsNotice: "Não substituímos ingredientes", // presente no Menu de Lanches
+  // Horário de funcionamento da loja: mesmo horário todos os dias da
+  // semana (segunda a domingo), conforme informado pelo estabelecimento.
+  hoursLabel: "Todos os dias, das 15h30 às 23h00",
+  hours: [
+    { day: "Segunda-feira", time: "15:30 - 23:00" },
+    { day: "Terça-feira", time: "15:30 - 23:00" },
+    { day: "Quarta-feira", time: "15:30 - 23:00" },
+    { day: "Quinta-feira", time: "15:30 - 23:00" },
+    { day: "Sexta-feira", time: "15:30 - 23:00" },
+    { day: "Sábado", time: "15:30 - 23:00" },
+    { day: "Domingo", time: "15:30 - 23:00" },
+  ],
+  paymentMethods: ["Débito", "Crédito", "Pix"], // informado pelo estabelecimento
 };
 
 // Formata número em Real brasileiro: 12.5 -> "R$ 12,50"

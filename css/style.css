@@ -440,8 +440,23 @@ input, textarea { font-family: inherit; }
 }
 @media (min-width: 760px) { .location-card { grid-template-columns: 1fr 1fr; align-items: center; } }
 .location-info h3 { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); color: var(--gold); margin: 0 0 10px; }
-.address-line { color: var(--cream); font-size: 0.95rem; margin: 0 0 14px; }
+.address-line { color: var(--cream); font-size: 0.95rem; margin: 0 0 8px; }
+.hours-line {
+  display: flex; align-items: center; gap: 7px;
+  color: var(--gold-soft); font-size: 0.88rem; font-weight: 600;
+  margin: 0 0 16px;
+}
 .location-notices { margin-top: 16px; font-size: 0.8rem; color: rgba(255,245,230,0.6); line-height: 1.7; }
+.payment-methods { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.payment-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,245,230,0.85);
+  font-size: 0.78rem; font-weight: 600;
+}
+.payment-badge svg { width: 14px; height: 14px; }
 .location-map { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
 
 /* ================= FOOTER ================= */
